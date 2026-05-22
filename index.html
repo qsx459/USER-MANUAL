@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>免付費離線翻頁電子書</title>
-    <!-- 引入支援離線運行的 jQuery 與 Turn.js 雲端路徑 -->
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="turn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
     <style>
         body {
             background-color: #333;
@@ -36,22 +35,24 @@
 <body>
 
 <div id="flipbook">
-    <!-- 這裡請根據你的圖片數量自行複製修改，有幾頁就寫幾行 -->
-    <div class="page"><img src="1.jpg" alt="第 1 頁"></div>
-    <div class="page"><img src="2.jpg" alt="第 2 頁"></div>
-    <div class="page"><img src="3.jpg" alt="第 3 頁"></div>
-    <div class="page"><img src="4.jpg" alt="第 4 頁"></div>
-    <div class="page"><img src="5.jpg" alt="第 5 頁"></div>
-    <div class="page"><img src="6.jpg" alt="第 6 頁"></div>
+    <div class="page"><img src="1.jpg"></div>
+    <div class="page"><img src="2.jpg"></div>
+    <div class="page"><img src="3.jpg"></div>
+    <div class="page"><img src="4.jpg"></div>
+    <div class="page"><img src="5.jpg"></div>
+    <div class="page"><img src="6.jpg"></div>
+    <div class="page"><img src="7.jpg"></div>
 </div>
 
 <script>
-    // 初始化翻頁效果
-    $("#flipbook").turn({
-        width: 800,
-        height: 500,
-        autoCenter: true,
-        duration: 1000 // 翻頁速度（毫秒）
+    $(document).ready(function() {
+        // 初始化翻頁
+        $("#flipbook").turn({
+            width: 800,
+            height: 500,
+            autoCenter: true,
+            duration: 1000
+        });
     });
 </script>
 
